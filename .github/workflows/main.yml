@@ -48,7 +48,7 @@ jobs:
         uses: robertomoutinho/gh-action-ecs-deploy@v1.0.0
         with:
           # The ECS cluster name where to deploy
-          ecs_cluster: 
+          ecs_cluster: default
           # The ECS service name where to deploy
           ecs_service: sample-app-service
           # The container name to be updated
