@@ -60,6 +60,6 @@ jobs:
           # The aws region
           aws_region: us-eastt-1
           # The aws access key id
-          aws_access_key_id: 
+          aws_access_key_id: ${{ secrets.aws_access_key}}
           # The aws secret access key
-          aws_secret_access_key: 
+          aws_secret_access_key: ${{ secrets.aws_secret }}
