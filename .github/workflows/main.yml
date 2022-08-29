@@ -42,18 +42,24 @@ jobs:
           aws-secret-access-key: ${{ secrets.aws_secret }}
           aws-region: us-east-1
 
-      - name: ECR push and ECS deploy
+      - name: AWS ECS deploy
         # You may pin to the exact commit or the version.
-        # uses: jaroldwong/ecr-push-and-ecs-deploy@4224a7137886e14d879087825db9c49a270636fc
-        uses: jaroldwong/ecr-push-and-ecs-deploy@v1
+        # uses: robertomoutinho/gh-action-ecs-deploy@3620904b3ea99e9de37e2a3fb6bf0880080d8f8f
+        uses: robertomoutinho/gh-action-ecs-deploy@v1.0.0
         with:
-          # ECR registry URI
-         # ecr-registry: ecr-demo
-          # ECR repository name
-          ecr-repository: ecr-demo
-          # ECR image tag. Defaults to latest
-          image-tag: # default is latest
-          # ECS cluster name. Defaults to default
-          ecs-cluster: # default is default
-          # ECS service name
-          ecs-service: 
+          # The ECS cluster name where to deploy
+          ecs_cluster: 
+          # The ECS service name where to deploy
+          ecs_service: demo-ecs
+          # The container name to be updated
+          ecs_container_name: default
+          # The app docker repository URL
+          app_repo_url: public.ecr.aws/nginx/nginx:perl
+          # The docker image tag to deploy
+          app_version: 
+          # The aws region
+          aws_region: us-eastt-1
+          # The aws access key id
+          aws_access_key_id: 
+          # The aws secret access key
+          aws_secret_access_key: 
