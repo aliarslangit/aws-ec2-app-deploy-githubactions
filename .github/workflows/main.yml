@@ -50,7 +50,7 @@ jobs:
           # The ECS cluster name where to deploy
           ecs_cluster: 
           # The ECS service name where to deploy
-          ecs_service: demo-ecs
+          ecs_service: sample-app-service
           # The container name to be updated
           ecs_container_name: default
           # The app docker repository URL
