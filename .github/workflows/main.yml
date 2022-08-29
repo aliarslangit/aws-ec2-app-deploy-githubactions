@@ -48,7 +48,7 @@ jobs:
         uses: jaroldwong/ecr-push-and-ecs-deploy@v1
         with:
           # ECR registry URI
-          ecr-registry: ecr-demo
+         # ecr-registry: ecr-demo
           # ECR repository name
           ecr-repository: ecr-demo
           # ECR image tag. Defaults to latest
