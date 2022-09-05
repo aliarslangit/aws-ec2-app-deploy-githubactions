@@ -55,8 +55,9 @@ jobs:
           ssh_before: |
                     echo 'hello'
           scp:        |
-                /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh ./
+                /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh .
           ssh_after:  |
+                    ls -la
                     bash ./bash.sh
                   
 
