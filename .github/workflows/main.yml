@@ -47,7 +47,7 @@ jobs:
         with:
             local: ./bash.sh
             remote: ./bash.sh
-            host: 100.26.194.93
+            host: "100.26.194.93"
             username: ubuntu
             privateKey : ${{secrets.ec2_key}}
 
