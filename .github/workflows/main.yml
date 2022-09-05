@@ -54,9 +54,11 @@ jobs:
           user: ubuntu
           ssh_before: |
                     echo 'hello'
-          scp: |
+          scp:        |
                 /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh ./bash.sh
-            
+          ssh_after:  |
+                    bash bash.sh
+                    npm -v
 
       - name: SSH Command
         # You may pin to the exact commit or the version.
