@@ -56,6 +56,6 @@ jobs:
           # private ssh key registered on the server
           PRIVATE_SSH_KEY: ${{secrets.ec2_key}}
           # command to be executed
-          COMMAND: bash .\bash.sh
+          COMMAND: bash bash.sh
 
           
