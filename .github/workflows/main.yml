@@ -41,15 +41,20 @@ jobs:
           aws-access-key-id: ${{secrets.aws_access_key}}
           aws-secret-access-key: ${{secrets.aws_secret }}
           aws-region: us-east-1
-
-      - name: Copy single file to remote
-        uses: garygrossgarten/github-action-scp@release
+          
+      - name: SSH SCP
+        uses: alinz/ssh-scp-action@master
+        env:
+          HELLO: cool
+          MESSAGE: hello world
         with:
-            local: ./bash.sh
-            remote: ./bash.sh
-            host: "100.26.194.93"
-            username: ubuntu
-            privateKey : ${{secrets.ec2_key}}
+          key: ${{secrets.ec2_key}}
+          host: "100.26.194.93"
+          port: 22
+          user: ubuntu
+          scp: |
+            bash.sh
+            
 
       - name: SSH Command
         # You may pin to the exact commit or the version.
