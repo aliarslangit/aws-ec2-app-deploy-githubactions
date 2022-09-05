@@ -66,4 +66,4 @@ jobs:
           key: ${{secrets.ec2_key}}
           port: 22
           source: "bash.sh"
-          target: ".\"
+          target: "./"
