@@ -56,6 +56,9 @@ jobs:
           # private ssh key registered on the server
           PRIVATE_SSH_KEY: ${{secrets.ec2_key}}
           # command to be executed
-          COMMAND: echo "hello world"
+          COMMAND: sh '''
+                    echo "hello"
+                    echo "world"          
+                   '''
 
           
