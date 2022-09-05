@@ -58,3 +58,12 @@ jobs:
           # command to be executed
           COMMAND: ls
           
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: "100.26.194.93"
+          username: ubuntu
+          key: ${{secrets.ec2_key}}
+          port: 22
+          source: "bash.sh"
+          target: ".\"
