@@ -42,6 +42,15 @@ jobs:
           aws-secret-access-key: ${{secrets.aws_secret }}
           aws-region: us-east-1
 
+      - name: Copy single file to remote
+        uses: garygrossgarten/github-action-scp@release
+        with:
+            local: ./bash.sh
+            remote: ./bash.sh
+            host: 100.26.194.93
+            username: ubuntu
+            privateKey : ${{secrets.ec2_key}}
+
       - name: SSH Command
         # You may pin to the exact commit or the version.
         # uses: D3rHase/ssh-command-action@981832f056c539720824429fa91df009db0ee9cd
@@ -58,12 +67,4 @@ jobs:
           # command to be executed
           COMMAND: ls
           
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@master
-        with:
-          host: "100.26.194.93"
-          username: ubuntu
-          key: ${{secrets.ec2_key}}
-          port: 22
-          source: "bash.sh"
-          target: "./"
+
