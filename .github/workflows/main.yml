@@ -53,11 +53,9 @@ jobs:
           port: 22
           user: ubuntu
           ssh_before: |
-                      ls -la
-                      cd /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/
-                      ls -la
+                    echo 'hello'
           scp: |
-            bash.sh ./bash.sh
+                /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh ./bash.sh
             
 
       - name: SSH Command
