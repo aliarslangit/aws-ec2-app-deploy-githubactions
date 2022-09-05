@@ -54,8 +54,8 @@ jobs:
           user: ubuntu
           ssh_before: |
                       ls -la
-                      echo 'hello world'
-          
+                      cd /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/
+                      ls -la
           scp: |
             bash.sh ./bash.sh
             
