@@ -76,6 +76,7 @@ jobs:
                     cd /home/ubuntu/
                     ls -la
                     bash ./bash.sh
+                    npm i
                   
 
       # - name: SSH Command
