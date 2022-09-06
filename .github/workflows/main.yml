@@ -75,8 +75,8 @@ jobs:
                     echo 'hello'
                     cd /home/ubuntu/
                     ls -la
-                    bash ./bash.sh
-                    npm i
+                   # bash ./bash.sh
+                   # npm i
                   
 
       # - name: SSH Command
