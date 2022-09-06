@@ -34,7 +34,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -61,24 +60,24 @@ jobs:
           key: ${{secrets.ec2_key}}
 
           
-      - name: SSH SCP
-        uses: alinz/ssh-scp-action@master
-        env:
-          HELLO: cool
-          MESSAGE: hello world
-        with:
-          key: ${{secrets.ec2_key}}
-          host: "100.26.194.93"
-          port: 22
-          user: ubuntu
-          ssh_before: |
-                    echo 'hello'
-          scp:        |
-                /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh /home/ubuntu/bash.sh
-          ssh_after:  |
-                    cd /home/ubuntu/
-                    ls -la
-                    bash ./bash.sh
+      # - name: SSH SCP
+      #   uses: alinz/ssh-scp-action@master
+      #   env:
+      #     HELLO: cool
+      #     MESSAGE: hello world
+      #   with:
+      #     key: ${{secrets.ec2_key}}
+      #     host: "100.26.194.93"
+      #     port: 22
+      #     user: ubuntu
+      #     ssh_before: |
+      #               echo 'hello'
+      #     scp:        |
+      #           /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh /home/ubuntu/bash.sh
+      #     ssh_after:  |
+      #               cd /home/ubuntu/
+      #               ls -la
+      #               bash ./bash.sh
                   
 
       # - name: SSH Command
@@ -97,4 +96,3 @@ jobs:
       #     # command to be executed
       #     COMMAND: ls
           
-
