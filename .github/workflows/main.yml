@@ -48,7 +48,7 @@ jobs:
         uses: c0c1/scp-action@v1.0
         with:
           # Sorce dir to deploy
-          src: /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions
+          src: /home/runner/work/aws-ec2-app-deploy-githubactions
           host: "100.26.194.93"
           # Remote dir path
           remote: /home/ubuntu
