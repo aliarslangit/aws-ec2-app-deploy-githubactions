@@ -71,7 +71,7 @@ jobs:
           port: 22
           user: ubuntu
           ssh_before: |
-                    cd /home/ubuntu/aws-ec2-app-deploy-githubactions/.github/workflows
+                    cd /home/ubuntu
                     bash bash.sh
                     cd /home/ubuntu/workspace
                     npm i
