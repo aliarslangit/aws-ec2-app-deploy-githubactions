@@ -72,9 +72,6 @@ jobs:
           user: ubuntu
           ssh_before: |
                     echo 'hello'
-          scp:        |
-                /home/runner/work/aws-ec2-app-deploy-githubactions/aws-ec2-app-deploy-githubactions/.github/workflows/bash.sh /home/ubuntu/bash.sh
-          ssh_after:  |
                     cd /home/ubuntu/
                     ls -la
                     bash ./bash.sh
