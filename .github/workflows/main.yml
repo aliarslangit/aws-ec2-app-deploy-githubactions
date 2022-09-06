@@ -73,7 +73,7 @@ jobs:
           ssh_before: |
                     cd /home/ubuntu/aws-ec2-app-deploy-githubactions/.github/workflows
                     bash bash.sh
-                    cd /home/ubuntu/aws-ec2-app-deploy-githubactions
+                    cd /home/ubuntu/workspace
                     npm i
       # - name: SSH Command
       #   # You may pin to the exact commit or the version.
