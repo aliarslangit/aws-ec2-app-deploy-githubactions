@@ -60,21 +60,21 @@ jobs:
           key: ${{secrets.ec2_key}}
 
           
-      - name: SSH SCP
-        uses: alinz/ssh-scp-action@master
-        env:
-          HELLO: cool
-          MESSAGE: hello world
-        with:
-          key: ${{secrets.ec2_key}}
-          host: "100.26.194.93"
-          port: 22
-          user: ubuntu
-          ssh_before: |
-                    echo 'hello'
-                    cd /home/ubuntu/
-                    ls -la
-                    bash ./bash.sh
+      # - name: SSH SCP
+      #   uses: alinz/ssh-scp-action@master
+      #   env:
+      #     HELLO: cool
+      #     MESSAGE: hello world
+      #   with:
+      #     key: ${{secrets.ec2_key}}
+      #     host: "100.26.194.93"
+      #     port: 22
+      #     user: ubuntu
+      #     ssh_before: |
+      #               echo 'hello'
+      #               cd /home/ubuntu/
+      #               ls -la
+      #               bash ./bash.sh
                   
       # - name: SSH Command
       #   # You may pin to the exact commit or the version.
